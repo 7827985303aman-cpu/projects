@@ -112,8 +112,9 @@ header{
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 #studio {
-    width: 540px;
+    width: 590px;
     padding-top: 15px;
+    
 }
 
 .men:hover #men, .women:hover #wmen, .kids:hover #kids, .home:hover #home, .beauty:hover #beauty, .genz:hover #genz, .studio:hover #studio{
@@ -200,11 +201,18 @@ body:has(.navfor:hover)::after {
     background-color: #f5f5f6; 
     border-radius: 4px;
     width: 100%;
-    max-width: 30vw; 
     height: 40px;
     /* margin: 0 1vw;  */
     padding: 0 1vw;
     border: 1px solid transparent; 
+}
+.box1{
+    max-width: 30vw;
+}
+.box2{
+    width: 90vw;
+    height: 60px;
+    /* justify-self: right; */
 }
 .searchbox:focus-within{
     background-color: white;
@@ -307,7 +315,6 @@ body:has(.navfor:hover)::after {
     width: 100%; 
 }
 
-
 .rising-stars:hover .rsslidertrack{
     animation-play-state: paused;
 }
@@ -397,7 +404,6 @@ body:has(.navfor:hover)::after {
     width: 100%;   
 }
 
-
 footer{
     width: 100%;
     background-color: #f9f9f9;
@@ -451,14 +457,14 @@ hr{
     border: 1px solid ;
 } */
 @media (max-width:1220px) {
-    .searchbox{
+    .box1{
         max-width: 20vw;
     }
 }
+
 @media (max-width:1024px){
-    
-    .searchbox{
-        max-width: 8vw;
+    .box1{
+        width: 15vw;
     }
     .rising-stars h2{
         font-size: 24px;
@@ -528,5 +534,57 @@ hr{
     }
     .i img{
         height: 100%;
+    }
+}
+@media (max-width:768px) {
+    /* .navbar{
+        display: none;
+    } */
+    .about, .misc, .misc2{
+        width: 90vw;
+    }
+}
+
+@media (max-width:890px) {
+    .box2{
+        display: none;
+    }
+    .men:hover #men{
+        margin-left: 40vw;
+    }
+    .women:hover #wmen{
+        margin-left: 28vw;
+    }
+    .kids:hover #kids{
+        margin-left: 10vw;
+    }    
+    .home:hover #home{
+        margin-right: 40vw;
+    } 
+    .beauty:hover #beauty{
+        margin-right: 48vw;
+    }
+    .genz:hover #genz{
+        margin-right: 50vw;
+    }
+    .studio:hover #studio{
+        margin-right: 40vw;
+    }
+    
+    .box1{
+        display: none;
+    }
+    .profilerel{
+        width: 1.2in;
+    }
+}
+/* @media (min-width:480px){
+    .navfor:hover{
+        display: none;
+    }
+} */
+@media (min-width:768px){
+    .ham{
+        display: none;
     }
 }
