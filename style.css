@@ -1,12 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
     color: #292846;
     margin-top: 0;
 }
+body, html {
+    overflow-x: hidden; /* Prevents horizontal scrolling entirely */
+    width: 100%;
+}
 main{
     justify-items: center;
-
+    width: 100%;
 }
 header{
     position: sticky;
@@ -15,7 +24,8 @@ header{
     background-color: white;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
     height: 80px;
-    width: 100vw;
+    width: 100%;
+    margin-left: 0;
 }
 
 .headflex{
@@ -40,7 +50,7 @@ header{
     /* border: 1px solid black; */
     /* width: 40vw; */
     /* height: 4.5vw; */
-    height: 50px;
+    height: 80px;
     list-style: none;
     align-items: center;
     padding-left: 0;
@@ -64,9 +74,8 @@ header{
     text-align: center;
     letter-spacing: 1px;
 }
-
-.navfor div{
-    padding: 0vw 1vw ;
+.navfor .mt{
+    padding: 28px 1vw;
 }
 
 .men:hover {
@@ -94,11 +103,12 @@ header{
     display: none; 
     position:absolute; 
     width: 75vw;
-    top: 80px;
-    padding: 10px 10px;
-    background-color: #fff;
-    min-height: 450px; 
-    z-index: 2000;
+    top: 70px;
+    padding: 40px 20px;
+    background-color: white;
+    /* max-height: 500px;  */
+    line-height: 50px;
+    z-index: -1;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 #studio {
@@ -134,12 +144,12 @@ header{
 .col ul{
     list-style: none;
     padding-left: 0;
-    line-height: 18px;
+    line-height: 24px;
 }
 .col a{
     text-decoration: none;
     color: black;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 100;
 }
 .col h4 a{
@@ -190,7 +200,7 @@ body:has(.navfor:hover)::after {
     background-color: #f5f5f6; 
     border-radius: 4px;
     width: 100%;
-    max-width: 32vw; 
+    max-width: 30vw; 
     height: 40px;
     /* margin: 0 1vw;  */
     padding: 0 1vw;
@@ -222,13 +232,12 @@ body:has(.navfor:hover)::after {
     font-size: 12px;
     font-weight: bolder;
     justify-content: space-between;
-    margin-top: 0.5vw;
 }
 
 .pwb{
     /* border: 1px solid black; */
     text-align: center;
-    line-height: 1px;
+    line-height: 15px;
 }
 .pwb span{
     font-size: 16px;
@@ -299,7 +308,9 @@ body:has(.navfor:hover)::after {
 .rsslide img{
     width: 100%; 
 }
-
+/* div{
+    border: 1px solid black;
+} */
 @keyframes scroll-2 {
     0% { transform: translateX(0); }
     28% { transform: translateX(0); }
@@ -356,12 +367,6 @@ body:has(.navfor:hover)::after {
 .medalbrands:hover .mbslidertrack{
     animation-play-state: paused;
 }
-
-
-
-
-
-
 .catbanner img{
     height: 8vw;
     width: 92vw;
@@ -402,8 +407,12 @@ footer{
 .about, .misc2 p{
     line-height: 20px;
 }
+.about ul, .about ol{
+    padding-left: 50px;
+}
 .about, .misc, .misc2{
-    width: 1100px;
+    width: 70vw;
+    height: fit-content;
     color: #8F8F92;
     font-size: 14px;
 }
@@ -433,3 +442,15 @@ hr{
     size: 3px;
     background-color: #8F8F92;
 }
+.hr{
+    border: 1px solid #e0e1e4;
+    height: 0;
+    width: 100%;
+
+}
+@media (max-width:1220px) {
+    .searchbox{
+        max-width: 20vw;
+    }
+}
+
