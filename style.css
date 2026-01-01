@@ -103,8 +103,8 @@ header{
     display: none; 
     position:absolute; 
     width: 75vw;
-    top: 70px;
-    padding: 40px 20px;
+    top: 80px;
+    padding: 30px 30px;
     background-color: white;
     /* max-height: 500px;  */
     line-height: 50px;
@@ -293,7 +293,6 @@ body:has(.navfor:hover)::after {
     letter-spacing: 5px;
     line-height: 10vw;
 }
-
 .rsslidertrack{
     display: flex;
     width: 300%; 
@@ -302,15 +301,16 @@ body:has(.navfor:hover)::after {
 
 .rsslidertrack .rsslide{
     display: flex;
-    width: 100%; /* Each slide is 1/3th of the 300% track */
-
+    width: 100%;
 }
 .rsslide img{
     width: 100%; 
 }
-/* div{
-    border: 1px solid black;
-} */
+
+
+.rising-stars:hover .rsslidertrack{
+    animation-play-state: paused;
+}
 @keyframes scroll-2 {
     0% { transform: translateX(0); }
     28% { transform: translateX(0); }
@@ -319,10 +319,6 @@ body:has(.navfor:hover)::after {
     66% { transform: translateX(-66%); }
     95% { transform: translateX(-66%); }
     100% { transform: translateX(0); } 
-}
-
-.rising-stars:hover .rsslidertrack{
-    animation-play-state: paused;
 }
 
 .medalbrands{
@@ -347,6 +343,7 @@ body:has(.navfor:hover)::after {
     display: flex;
     width: 100%; /* Each slide is 1/3th of the 300% track */
 }
+
 
 .mbslide img{
     width: 100%; 
@@ -378,13 +375,14 @@ body:has(.navfor:hover)::after {
     grid-template-columns: repeat(6, 15vw);
     grid-template-rows: repeat(6, 20vw );
     /* margin-left: 2.5vw; */
-
 }
 .cat{
     /* border: 1px solid black; */
     height: 20vw;
     width: 15vw;
 }
+
+
 .lastrow{
     grid-column: 1 / -1;
     display: grid;
@@ -398,6 +396,7 @@ body:has(.navfor:hover)::after {
     /* height: 100%; */
     width: 100%;   
 }
+
 
 footer{
     width: 100%;
@@ -448,9 +447,86 @@ hr{
     width: 100%;
 
 }
+/* div{
+    border: 1px solid ;
+} */
 @media (max-width:1220px) {
     .searchbox{
         max-width: 20vw;
     }
 }
-
+@media (max-width:1024px){
+    
+    .searchbox{
+        max-width: 8vw;
+    }
+    .rising-stars h2{
+        font-size: 24px;
+    }
+    .rsslidertrack{
+        width: 500%;
+    }
+    .rsslidertrack .rsslide{
+        width: auto;
+    }
+    @keyframes scroll-2 {
+        0% { transform: translateX(0); }
+        17% { transform: translateX(0); }
+        20% { transform: translateX(-20%); } 
+        37% { transform: translateX(-20%); } 
+        40% { transform: translateX(-40%); } 
+        57% { transform: translateX(-40%); } 
+        60% { transform: translateX(-60%); }
+        77% { transform: translateX(-60%); }
+        80% { transform: translateX(-80%); }
+        97% { transform: translateX(-80%); }
+        100% { transform: translateX(0); } 
+    }
+    .medalbrands h2{
+        font-size: 24px;
+    }
+    .mbslidertrack{
+        width: 800%;
+    }
+    .mbslidertrack .mbslide{
+        width: auto;
+    }
+    @keyframes scroll-3 {
+        0% { transform: translateX(0); }
+        10% { transform: translateX(0); }
+        12% { transform: translateX(-12%); } 
+        22% { transform: translateX(-12%); } 
+        25% { transform: translateX(-25%); } 
+        34% { transform: translateX(-25%); } 
+        37% { transform: translateX(-37%); }
+        47% { transform: translateX(-37%); }
+        50% { transform: translateX(-50%); }
+        60% { transform: translateX(-50%); }
+        62% { transform: translateX(-62%); }
+        72% { transform: translateX(-62%); }
+        75% { transform: translateX(-75%); }
+        84% { transform: translateX(-75%); }
+        87% { transform: translateX(-87%); }
+        97% { transform: translateX(-87%); }
+        100% { transform: translateX(0); } 
+    }
+    .bycat{
+        grid-template-columns: repeat(4, 22.5vw);
+        grid-template-rows: repeat(9, 28vw);
+    }   
+    .cat{
+        height: 28vw;
+        width: 22.5vw;
+    }
+    .lastrow{
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .lastrow .i{
+        width: 25vw;
+    }
+    .i img{
+        height: 100%;
+    }
+}
