@@ -461,13 +461,13 @@ hr{
 div{
     border: 1px solid ;
 }
-@media (max-width:1220px) {
+@media screen and (max-width:1220px) {
     .box1{
         max-width: 20vw;
     }
 }
 
-@media (max-width:1024px){
+@media screen and (max-width:1024px){
     .box1{
         width: 15vw;
     }
@@ -541,7 +541,7 @@ div{
         height: 100%;
     }
 }
-@media (max-width:768px) {
+@media screen and (max-width:768px) {
     .navbar{
         display: none;
     }
@@ -550,7 +550,7 @@ div{
     }
 }
 
-@media (max-width:890px) {
+@media screen and (max-width:890px) {
     .box2{
         display: none;
     }
@@ -589,7 +589,7 @@ div{
 @media screen and (min-width:768px){
     .ham{
         display: none;
-        /* justify-self: left; */
+        justify-self: left;
 
     }
 }
