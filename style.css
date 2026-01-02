@@ -458,9 +458,9 @@ hr{
     width: 100%;
 
 }
-/* div{
+div{
     border: 1px solid ;
-} */
+}
 @media (max-width:1220px) {
     .box1{
         max-width: 20vw;
@@ -505,20 +505,20 @@ hr{
     @keyframes scroll-3 {
         0% { transform: translateX(0); }
         10% { transform: translateX(0); }
-        12% { transform: translateX(-12%); } 
-        22% { transform: translateX(-12%); } 
+        12.5% { transform: translateX(-12.5%); } 
+        22% { transform: translateX(-12.5%); } 
         25% { transform: translateX(-25%); } 
         34% { transform: translateX(-25%); } 
-        37% { transform: translateX(-37%); }
-        47% { transform: translateX(-37%); }
+        37.5% { transform: translateX(-37.5%); }
+        47% { transform: translateX(-37.5%); }
         50% { transform: translateX(-50%); }
         60% { transform: translateX(-50%); }
-        62% { transform: translateX(-62%); }
-        72% { transform: translateX(-62%); }
+        62.5% { transform: translateX(-62.5%); }
+        72% { transform: translateX(-62.5%); }
         75% { transform: translateX(-75%); }
         84% { transform: translateX(-75%); }
-        87% { transform: translateX(-87%); }
-        97% { transform: translateX(-87%); }
+        87.5% { transform: translateX(-87.5%); }
+        97% { transform: translateX(-87.5%); }
         100% { transform: translateX(0); } 
     }
     .bycat{
@@ -542,11 +542,11 @@ hr{
     }
 }
 @media (max-width:768px) {
-    /* .navbar{
+    .navbar{
         display: none;
-    } */
+    }
     .about, .misc, .misc2{
-        width: 90vw;
+        width: 95vw;
     }
 }
 
@@ -586,8 +586,10 @@ hr{
 @media (max-width:480px){
     
 }
-@media (min-width:768px){
+@media screen and (min-width:768px){
     .ham{
         display: none;
+        /* justify-self: left; */
+
     }
 }
