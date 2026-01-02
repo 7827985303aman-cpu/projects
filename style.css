@@ -27,7 +27,12 @@ header{
     width: 100%;
     margin-left: 0;
 }
-
+@media (max-width:480px) {
+    header{
+        height: 160px;
+    }
+    
+}
 .headflex{
     display: flex;
     /* border: 1px solid black; */
@@ -578,11 +583,9 @@ hr{
         width: 1.2in;
     }
 }
-/* @media (min-width:480px){
-    .navfor:hover{
-        display: none;
-    }
-} */
+@media (max-width:480px){
+    
+}
 @media (min-width:768px){
     .ham{
         display: none;
