@@ -23,16 +23,11 @@ header{
     z-index: 1000;
     background-color: white;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
-    height: 160px;
+    height: 80px;
     width: 100%;
     margin-left: 0;
 }
-@media (max-width:480px) {
-    header{
-        height: 160px;
-    }
-    
-}
+
 .headflex{
     display: flex;
     /* border: 1px solid black; */
@@ -43,6 +38,7 @@ header{
 
 .homeimg{
     /* border: 1px solid black; */
+    order: 0;
     margin-left: 2vw;
 }
 .homeimg img{
@@ -51,6 +47,7 @@ header{
 }
 
 .navbar{
+    order: 1;
     display: flex;
     /* border: 1px solid black; */
     /* width: 40vw; */
@@ -199,8 +196,21 @@ body:has(.navfor:hover)::after {
     opacity: 1;
     visibility: visible;
 }
+#menu-toggle{
+    display: none;
+}
+.ham {
+    margin-right: 36vw;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    user-select: none;
+    /* height: 100px; */
+}
+    
 
 .searchbox{
+    order: 2;
     display: flex;
     align-items: center;
     background-color: #f5f5f6; 
@@ -215,8 +225,10 @@ body:has(.navfor:hover)::after {
     max-width: 30vw;
 }
 .box2{
+    margin: 0 5vw ;
     width: 90vw;
     height: 60px;
+    position: fixed;
     /* justify-self: right; */
 }
 .searchbox:focus-within{
@@ -235,9 +247,10 @@ body:has(.navfor:hover)::after {
 .searchicon{
     color: #696e79;
     font-size: 14px;
-    }
+}
 
 .profilerel{
+    order: 3;
     display: flex;
     /* border: 1px solid black; */
     width: 1.5in;
@@ -260,6 +273,29 @@ body:has(.navfor:hover)::after {
     color: #282c3f;
 }
 
+@media (max-width:480px) {
+    header{
+        /* height: 10px; */
+    }
+    main{
+        padding-top: 70px;
+    }
+    .headflex{
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+    .homeimg{
+
+    }
+    .homeimg img{
+        width: 90px;
+        height: 80px;
+    }
+    
+    .profilerel{
+        margin-right: 5vw;
+    }    
+}
 .fstpurchase img{
     height: 8.5vw;
     aspect-ratio: 11 / 1;
@@ -458,9 +494,7 @@ hr{
     width: 100%;
 
 }
-div{
-    border: 1px solid ;
-}
+
 @media screen and (max-width:1220px) {
     .box1{
         max-width: 20vw;
@@ -542,6 +576,9 @@ div{
     }
 }
 @media screen and (max-width:768px) {
+    header{
+        height: 0px;
+    }
     .navbar{
         display: none;
     }
@@ -551,7 +588,14 @@ div{
 }
 
 @media screen and (max-width:890px) {
-    .box2{
+    header{
+        position: fixed;
+        height: 160px;
+    }
+    main{
+        padding-top: 160px;
+    }
+    .box1{
         display: none;
     }
     .men:hover #men{
@@ -583,9 +627,7 @@ div{
         width: 1.2in;
     }
 }
-@media (max-width:480px){
-    
-}
+
 @media screen and (min-width:768px){
     .ham{
         display: none;
@@ -593,3 +635,12 @@ div{
 
     }
 }
+@media screen and (min-width:890px){
+    .box2{
+        display: none;
+    }
+}
+
+/* div{
+    border: 1px solid ;
+} */
